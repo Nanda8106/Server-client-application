@@ -1,0 +1,51 @@
+Instructions to run the application
+
+Download and extract the zip file
+
+The file structure is as follows:
+
+admin
+    -data
+        -commands.txt
+        -credentials.txt
+        -logs.txt
+    -services
+        -authentication
+            -authenticate_user.py
+            -entry
+                -sign_in.py
+                -sign_up.py
+                -signout.py
+        -directory_management
+            -change_folder.py
+            -create_folder.py
+            -list.py
+        -text_file_management
+            -read_file.py
+            -write_file.py
+        -commands_management.py
+        -print-commands.py
+    -client.py
+    -server.py
+    -test.py
+    -user_details.py
+users
+    -all users
+
+
+Instruction to run the application:
+----------------------------------
+
+1. After succsffully downloded and extracted the zip file, the file structure looks as like above.
+2. First open command prompt or your favourite terminal like vs code, pycharm etc., then navigate to the admin folder in the given structure
+3. There we will find server.py, cleint.py file which are the main python files that we need to run.
+4. After navigating to the admin folder, if it is command_prompt type server.py file or vs code terminal type ./server.py.
+5. After server.py file is running successfully, then again open new terminal, navigate to the admin folder, run client.py file same as like 4th point.
+6. That's it, finally our application will successfully runs, then you can use any services by typing commands in the client side.
+
+---------------------------------------------------------------------------
+|  Note: Server.py file needs to run compulsory to run the client.py file |
+---------------------------------------------------------------------------
+
+
+Thank you

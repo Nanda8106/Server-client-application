@@ -1,0 +1,63 @@
+Welcome to the nandakishore server client application:
+
+Below are the commands that support in this application:
+
+1 -> login <username> <password>
+
+info: Logs the user with <username> onto the server if the <password> provided matches the password 
+used while registering. If the <password> does not match or if the <username> does not exist, an error message 
+will be returned.
+
+2 -> register <username> <password>
+
+info: Register a new user to the server using the <username> and <password> provided. If a user is already registered 
+with the provided <username>, the request will be denied with a proper message highlighting the error for the 
+user. A new personal folder named <username> will be created on the server. 
+
+3 -> create_folder <name>
+
+info: Creates a new folder with the specified <name> in the current working directory for the user issuing the request. 
+If a folder with the given name already exists, the request will be denied with a proper message highlighting the 
+error for the user. 
+
+4 -> change_folder <name>
+
+info1: Moves the current working directory for the current user to the specified folder residing in the current folder. 
+If the <name> does not point to a folder in the current working directory, the request will be denied with a proper 
+message highlighting the error for the user. 
+
+info2: To walk back the previous folder, replace <name> with two dots (..) . This only be available 
+if the user is not currently standing in Root. This overrides the <name> rule in the previous box.
+
+
+5 -> write_file <name> <input>
+
+info1: Writes the data in <input> to the end of the file <name> in the current working directory for the user 
+issuing the request, starting on a new line.  If no file exists with the given <name>, a new file will be 
+created in the current working directory for the user.
+
+info 2: If <input> is empty, then the specified file will be cleared of content.
+
+6 -> read_file <name>
+
+info1: 	Reads the data from the file <name> in the current working directory for the user issuing the request 
+and returns the first hundred characters in it. Each subsequent call by the same client will return 
+the next hundred characters in the file, up until all characters are read. If a file with the specified 
+<name> does not exist in the current working directory for the user, the request will be denied with a 
+proper message highlighting the error for the user. 
+
+info2: A service request without a <name> variable will close the currently opened file from reading. 
+Subsequent calls with this file as <name> will start reading from the beginning of the file.
+
+7 -> list
+
+info : Prints all files and folders in the current working directory for the user issuing the request. 
+This command is expected to give information about the name, size, date and time of creation.
+
+8 -> commands
+
+info: 	Prints information about all available commands, including expected input and what alternative usage they have.
+
+9 -> quit or exit 
+
+info: 	Logs out the user, close the connection to the server, and close the application.
